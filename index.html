@@ -1,13 +1,155 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FCC Survey Form</title>
-    
-</head>
-<body>
 
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.j"></script>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <title>FCC Survey Form</title>
+
+</head>
+
+<body>
+    <div class="header-bar">
+        <h1 id="title">What will you do?</h1>
+        <button onclick="document.querySelector('#myCard').classList.toggle('flip')">
+            Instructions
+        </button>
+    </div>
+    <main>
+        <div id="card-holder">
+            <div id="myCard" class="flip-container flip">
+                <div class="flipper">
+                    <div class="front">
+                        <!-- front content -->
+                        <form id="survey-form">
+                            <h2>Get it done in 2018 </h2>
+                            <p class="section-label">Personal details</p>
+
+                            <div class="input-row">
+                                <div class="left-tab">
+                                    <label for="name" id="name-label">
+                                        <span> Name:</span>
+                                    </label>
+                                </div>
+                                <div class="right-tab">
+                                    <input class="input-field" type="text" id="name" placeholder="First name" required>
+                                </div>
+                            </div>
+
+                            <div class="input-row">
+                                <p>
+                                    <div class="left-tab">
+                                        <label for="email" id="email-label">
+                                            <span>Email: </span>
+                                        </label>
+                                    </div>
+                                    <div class="right-tab">
+                                        <input class="input-field" type="email" id="email" placeholder="address@domain.com" required>
+                                    </div>
+                                </p>
+                            </div>
+                            <p class="section-label">Experience</p>
+                            <div class="input-row">
+                                <div class="left-tab">
+                                    <label for="dropdown">
+                                        <span>Industry:</span>
+                                    </label>
+                                </div>
+                                <div class="right-tab">
+                                    <select class="input-dropdown" id="dropdown">
+                                        <option>Consulting</option>
+                                        <option>Sales</option>
+                                        <option>Engineering</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="left-tab">
+                                    <label for="number" id="number-label">
+                                        <span>Years of experience:</span>
+                                    </label>
+                                </div>
+                                <div class="right-tab">
+                                    <input class="input-field" type="number" id="number" min="0" max="99" placeholder="0-99">
+                                </div>
+                            </div>
+                            <p class="section-label">Goal</p>
+                            <div class="input-row">
+                                <div class="left-tab">
+                                    Commitment level:
+                                </div>
+                                <div class="right-tab">
+                                    <div class="selection-group">
+                                        <div class="selection-option">
+                                            <input type="radio" name="Commitment" value="100%">
+                                            <label>100%</label>
+                                        </div>
+                                        <div class="selection-option">
+                                            <input type="radio" name="Commitment" value="Dont bother" checked>
+                                            <label>None</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="input-row">
+                                <div class="left-tab">
+                                    I'm doing this for:
+                                </div>
+                                <div class="right-tab">
+                                    <div class="selection-group">
+                                        <div class="selection-option">
+                                            <input type="checkbox" value="Me">Myself
+                                        </div>
+                                        <div class="selection-option">
+                                            <input type="checkbox" value="family">Family
+                                        </div>
+                                        <div class="selection-option">
+                                            <input type="checkbox" value="community">Community
+                                        </div>
+                                        <div class="selection-option">
+                                                <input type="checkbox" value="other">Other
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <fieldset>
+
+                                    <legend>
+                                        <span>Motivation</span>
+                                    </legend>
+                                    <textarea id="comment-box" placeholder="What will you get done?"></textarea>
+                                </fieldset>
+                            </div>
+                            <br>
+                            <div class="form-footer">
+                                <button type="submit" id="submit">Commit</button>
+                            </div>
+
+
+                        </form>
+                    </div>
+                    <div class="back">
+                        <!-- back content -->
+                        <div>
+                            <p id="description"> This answers questions regarding the form. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
+
 </html>
